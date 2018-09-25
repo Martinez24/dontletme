@@ -39,7 +39,87 @@ $colors: (
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222
+
 );
+.home{
+  height: 25px;
+  width: 25px;
+}
+//Cabecera
+ion-navbar{
+.toolbar-background {
+
+background: #000;
+
+}
+.toolbar-title{
+  text-align: justify;
+  color: #fff;
+  font: bold;
+  font-weight: 200;
+}
+}
+//Termina cabeca.
+//Tabs
+.tabs-md .tab-button[aria-selected=true] {
+    color: #0000; /*your  text color */
+    background: #eccc68; /* your background color*/
+}
+//termina tabs
+ion-menu {
+	.menu-content
+	{
+		background-color: #000;
+	}
+
+	.menu-list
+	{
+		margin: 10vh 0px 0px !important;
+
+		.item
+		{
+			background-color: #000;
+			padding-right: 32px;
+
+			&:first-child
+			{
+        border: #fff;
+			}
+
+			.item-inner
+			{
+
+				font-size: 1.5rem;
+				font-weight: 300;
+				letter-spacing: 1px;
+				color: #fff;
+        position:center;
+			}
+
+			.item-icon
+			{
+				color: #fff;
+				font-size: 3.4rem;
+			}
+
+			&.activated
+			{
+  			background-color: #fff;
+  			transition-duration: 0ms;
+
+				.item-inner
+				{
+					color: #fff;
+				}
+
+				.item-icon
+				{
+					color: #fff;
+				}
+			}
+		}
+	}
+}
 
 
 // App iOS Variables

@@ -1,0 +1,132 @@
+ <!--
+  Generated template for the CartaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Carta Móvil</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+  <!-- <ion-list *ngFor='let task of tasks | async'>
+    <ion-item>{{ task.name }}</ion-item>
+</ion-list> -->
+  <!--Barra de busqueda-->
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-card>
+
+    <ion-card-header class="fondo_negro">
+      <p class="titulos_1"> Carta de bebidas </p>
+    </ion-card-header>
+    <ion-card-content class="fondo_negro">
+      <p class="titulos"> Puedes reservar tus bebidas antes y despues de tu reservación. </p>
+    </ion-card-content>
+
+   </ion-card>
+ <ion-card *ngFor="let item of items | async" class="atras">
+  <ion-card-content class="atras">
+      <img src="./assets/imgs/carta/5.png"/>
+      <ion-card-title class="titulos">
+        {{ item.name }}
+      </ion-card-title>
+      <p  class="titulos">{{ item.category }}</p>
+    <ion-item class="atras">
+      <ion-icon name="ios-cash" item-start></ion-icon>
+        <p class="titulos_2"> Precio </p>
+      <ion-badge class="fon" item-end>{{ item.price }}</ion-badge>
+    </ion-item>
+    <ion-item class="atras">
+      <ion-icon name="md-wine" item-start></ion-icon>
+        <a class="titulos">Reservar</a>
+      <ion-badge item-end></ion-badge>
+    </ion-item>
+  </ion-card-content>
+  </ion-card>
+
+  <!-- <ion-card class="atras">
+  <ion-card-content class="atras">
+    <img src="./assets/imgs/carta/1.png"/>
+    <ion-card-title class="titulos">
+      Tequila
+    </ion-card-title>
+    <p class="titulos"> Don Julio  </p>
+    <ion-item class="atras">
+      <ion-icon name="ios-cash" item-start></ion-icon>
+      <p class="titulos_2"> Precio </p>
+      <ion-badge class="fon" item-end>$509.00</ion-badge>
+    </ion-item>
+    <ion-item class="atras">
+      <ion-icon name="md-wine" item-start></ion-icon>
+        <a class="titulos">Reservar</a>
+      <ion-badge item-end></ion-badge>
+    </ion-item>
+  </ion-card-content>
+  </ion-card>
+
+  <ion-card class="atras">
+    <ion-card-content class="atras">
+      <img src="./assets/imgs/carta/2.png"/>
+    <ion-card-title class="titulos">
+    Whisky
+    </ion-card-title>
+    <p class="titulos"> Red Label </p>
+    <ion-item class="atras">
+      <ion-icon name="ios-cash" item-start></ion-icon>
+      <p class="titulos_2"> Precio </p>
+      <ion-badge class="fon" item-end>$800.00</ion-badge>
+    </ion-item>
+  <ion-item class="atras">
+    <ion-icon name="md-wine" item-start></ion-icon>
+      <a class="titulos">Reservar</a>
+    <ion-badge item-end></ion-badge>
+  </ion-item>
+  </ion-card-content>
+  </ion-card>
+
+  <ion-card class="atras">
+  <ion-card-content class="atras">
+    <img src="./assets/imgs/carta/3.png"/>
+      <ion-card-title class="titulos">
+        Whisky
+      </ion-card-title>
+    <p class="titulos"> Buchannas </p>
+    <ion-item class="atras">
+      <ion-icon name="ios-cash" item-start></ion-icon>
+      <p class="titulos_2"> Precio </p>
+      <ion-badge class="fon" item-end>$902.00</ion-badge>
+    </ion-item>
+    <ion-item class="atras">
+      <ion-icon name="md-wine" item-start></ion-icon>
+        <a class="titulos">Reservar</a>
+      <ion-badge item-end></ion-badge>
+    </ion-item>
+  </ion-card-content>
+  </ion-card>
+
+  <ion-card class="atras">
+  <ion-card-content class="atras">
+    <img src="./assets/imgs/carta/4.png"/>
+    <ion-card-title class="titulos">
+    Ron
+    </ion-card-title>
+    <p class="titulos"> Bacardi </p>
+    <ion-item class="atras">
+      <ion-icon name="ios-cash" item-start></ion-icon>
+        <p class="titulos_2"> Precio </p>
+      <ion-badge class="fon" item-end>$805.00</ion-badge>
+    </ion-item >
+    <ion-item class="atras">
+      <ion-icon name="md-wine" item-start></ion-icon>
+        <a class="titulos">Reservar</a>
+      <ion-badge item-end></ion-badge>
+    </ion-item>
+    </ion-card-content>
+  </ion-card> -->
+</ion-content>
