@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 //Firebase
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { AngularFireDatabase } from 'angularfire2/database';
 //import { Observable } from 'rxjs/Observable';
 import { Observable } from 'rxjs-compat';
 //import { map } from 'rxjs-compat/operators';
