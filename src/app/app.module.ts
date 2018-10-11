@@ -14,6 +14,10 @@ import { CartaPage } from "../pages/carta/carta";
 import { HistorialPage } from "../pages/historial/historial";
 import { Reservacion_1Page } from "../pages/reservacion-1/reservacion-1";
 import { TabsPage } from "../pages/tabs/tabs";
+import { AdminLoginPage } from "../pages/admin-login/admin-login";
+import { AdminHomePage } from "../pages/admin-home/admin-home";
+import { AdminUsersPage } from "../pages/admin-users/admin-users";
+
 
 
 //import { AuthService } from '../providers/auth-service';
@@ -27,6 +31,8 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
 //Plugins
 import { Facebook } from '@ionic-native/facebook';
 import { GooglePlus } from '@ionic-native/google-plus';
+import { AuthProvider } from '../providers/auth/auth';
+import { UserProvider } from '../providers/user/user';
 
 
 export const firebaseConfig = {
@@ -49,7 +55,10 @@ export const firebaseConfig = {
     Reservacion_1Page,
     NosotrosPage,
     CartaPage,
-    HistorialPage
+    HistorialPage,
+    AdminLoginPage,
+    AdminHomePage,
+    AdminUsersPage
   ],
   imports: [
     BrowserModule,
@@ -69,7 +78,10 @@ export const firebaseConfig = {
     Reservacion_1Page,
     NosotrosPage,
     CartaPage,
-    HistorialPage
+    HistorialPage,
+    AdminLoginPage,
+    AdminHomePage,
+    AdminUsersPage
   ],
   providers: [
     StatusBar,
@@ -78,7 +90,9 @@ export const firebaseConfig = {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     UsuarioProvider,
     Facebook,
-    GooglePlus
+    GooglePlus,
+    AuthProvider,
+    UserProvider
     //AuthService
   ]
 })

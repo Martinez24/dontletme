@@ -10,8 +10,8 @@ import { CartaPage } from "../pages/carta/carta";
 import { Reservacion_1Page } from "../pages/reservacion-1/reservacion-1";
 import { PerfilPage } from "../pages/perfil/perfil";
 import { HistorialPage } from "../pages/historial/historial";
-
-
+import { AngularFireAuth } from 'angularfire2/auth';
+import { UsuarioProvider } from "../providers/usuario/usuario";
 
 
 @Component({
@@ -30,7 +30,9 @@ export class MyApp {
   constructor(platform: Platform,
      statusBar: StatusBar,
       splashScreen: SplashScreen,
-    public menuCtrl: MenuController) {
+    public menuCtrl: MenuController,
+    public usuarioProv: UsuarioProvider,
+    private afAuth: AngularFireAuth) {
 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -79,5 +81,12 @@ export class MyApp {
   console.log( rootPage );
   this.rootPage= rootPage;
   this.menuCtrl.close();
+  }
+  salir( rootPage ){
+    this.afAuth.auth.signOut().then( res => {
+      this.usuarioProv.usuario = {};
+    this.rootPage= LoginPage;
+    this.menuCtrl.close();
+    });
   }
 }

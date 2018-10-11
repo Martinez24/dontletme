@@ -12,8 +12,8 @@ import { Platform } from 'ionic-angular';
 import { Facebook } from '@ionic-native/facebook';
 import { GooglePlus } from '@ionic-native/google-plus';
 
-
-
+import { AdminLoginPage } from "../../pages/admin-login/admin-login";
+import { AdminHomePage } from "../../pages/admin-home/admin-home";
 
 @IonicPage()
 @Component({
@@ -21,7 +21,7 @@ import { GooglePlus } from '@ionic-native/google-plus';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-
+  pageLogin="admin-login";
   constructor(public navCtrl: NavController,
               private afAuth: AngularFireAuth,
               public usuarioProv: UsuarioProvider,
@@ -90,6 +90,8 @@ export class LoginPage {
       });
     }
   }
+  goLogin() {
+    this.navCtrl.push(AdminLoginPage);
+    }
 
-  
 }
